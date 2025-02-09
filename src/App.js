@@ -26,3 +26,8 @@ function App() {
 }
 
 export default App;
+/*
+git add .
+git commit -m "dz#2anddz#3"  
+git push origin main
+*/
