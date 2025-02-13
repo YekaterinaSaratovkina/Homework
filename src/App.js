@@ -6,20 +6,24 @@ import User from "./pages/User/User";
 import Albums from "./pages/Albums/Albums";
 import SelectingAnAlbumWithPhotos from "./pages/SelectingAnAlbumWithPhotos/SelectingAnAlbumWithPhotos";
 import ToDoList from "./components/ToDoList/ToDoList"
-// import AlbomsItemList from "./components/AlbomsItemList/AlbomsItemList";
-
+import Form from "./pages/Form/Form";
+import StepForm from "./pages/StepForm/StepForm";
+import UncotrolledForm from "./components/UncotrolledForm/UncotrolledForm";
 
 function App() {
   return (
     <BrowserRouter>
-    <Nav />
+      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />;
         <Route path="/about" element={<About />} />;
-        <Route path ="/user/:id" element={<User />} />;
-        <Route path ="/albums" element={<Albums />} />;
+        <Route path="/user/:id" element={<User />} />;
+        <Route path="/albums" element={<Albums />} />;
         <Route path="/album/:albumId" element={<SelectingAnAlbumWithPhotos />} />;
         <Route path="/to-do-list" element={<ToDoList />} />
+        <Route path="/form" element={<Form />} />
+        <Route path="/step-form" element={<StepForm />} />
+        <Route path="/uncotrolled" element={<UncotrolledForm />} />
       </Routes>
     </BrowserRouter>
   );

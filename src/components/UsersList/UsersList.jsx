@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./UsersList.module.css";
 import UsersListItem from '../UsersListItem/UsersListItem';
+import axios from 'axios';
 
 const UsersList = () => {
 
@@ -23,6 +24,15 @@ const UsersList = () => {
 
         }
         fetchUsers();
+
+        axios
+            .get("http://jsonplaceholder.typicode.com/users")
+            .then(response => {
+                setUsers(response.data);
+            })
+            .finally(()=>{
+                setIsLoading(false)
+            })
     }, [])
 
     if (isLoading) {

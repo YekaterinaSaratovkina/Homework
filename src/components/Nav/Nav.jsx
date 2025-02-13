@@ -9,6 +9,11 @@ const Nav = () => {
       <Link to={"/about"}>About</Link>
       <Link to={"/albums"}>Albums</Link>
       <Link to={"/to-do-list"}>To Do list</Link>
+      <Link to={"/form"}>Form</Link>
+      <Link to={"/step-form"}>Step form</Link>
+      <Link to={"/uncotrolled"}>Uncotrolled Form</Link>
+
+      
     </nav>
   )
 }
